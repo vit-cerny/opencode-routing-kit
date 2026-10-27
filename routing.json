@@ -1,0 +1,12 @@
+{
+  "core": true,
+  "skills": true,
+  "search": true,
+  "brain": true,
+  "graphify": true,
+  "tokensave": true,
+  "parallel": true,
+  "decisions": true,
+  "mcp": true,
+  "headroom": false
+}
