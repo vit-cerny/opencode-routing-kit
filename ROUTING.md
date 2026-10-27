@@ -56,6 +56,15 @@ Set environment variables in Windows **User environment variables**, then fully 
 
 Jev/Laya decision settings belong in the user-local Jev MCP configuration. This machine's Jev server runs from `~/Documents/browseruse/jev_mcp.py`; inspect its CLI/config documentation for supported variables. Do not put Jev credentials in `routing.json`. Laya is a local deterministic engine and needs no model key; Jev live-browser access may need separate local configuration. There is no global `JEV_API_KEY` setting documented in OpenCode itself.
 
+| Variable | Consumer |
+|---|---|
+| `JEV_DECISION` | `laya` default; `typesafe` requires TYPESAFE_API_KEY |
+| `TYPESAFE_API_KEY` | Jev TypeSafe decision API |
+| `TEXT_MODEL_API_KEY`, `TEXT_MODEL_BASE_URL`, `TEXT_MODEL` | Jev typing/model calls |
+| `JEV_CHROME`, `JEV_BROWSER`, `JEV_OBSCURA_PORT`, `JEV_OBSCURA_WORKERS` | Jev browser backend |
+
+Tested 2026-10-27: Jev fetched `https://example.com` and Laya answered a triage preset in ~70s on first model load. Use Jev for live pages and `laya_ask` for typed decisions. Playwright/Chrome DevTools MCP are optional; keep them disabled unless a task needs structured browser automation, then enable only for that task. Chrome DevTools MCP slim mode (`--slim --headless`) is the lowest-context option among Chrome MCPs.
+
 ## Headroom, optional
 
 The switch expects the official `headroom-opencode` package next to the global plugin. Install its dependencies in the isolated global config environment, not in a project:
