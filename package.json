@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/routing.test.mjs tests/switch.test.mjs"
+    "test": "node --test tests/routing.test.mjs tests/switch.test.mjs tests/rtk.test.mjs"
   },
   "devDependencies": {
     "@opencode/plugin": "^2.0.32"

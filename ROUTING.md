@@ -88,6 +88,7 @@ Verified on OpenCode v2.0.32:
 - Native search was set to `random`; one actual request returned HTTP 402. DeepSeek search/fetch worked independently.
 - Graphify CLI was installed. `graphify install --platform opencode` installed its global skill; the legacy per-project hook was replaced by this V2 router.
 - Subagent routing is instructed globally, not enforced at runtime. Concurrent file ownership is still required.
+- RTK 0.50 is installed globally. Its OpenCode V2 plugin rewrites supported shell commands through `rtk rewrite`; ultra-compact RTK config is enabled.
 - Headroom was not installed before this setup; it stays opt-in.
 - `~/.config/opencode/opencode.json` and `.jsonc` both exist and merge. This project also has its own config, which overrides global agent/MCP definitions. Publishing this project as-is does not reproduce the full personal global setup.
 
